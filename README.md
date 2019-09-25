@@ -1,5 +1,5 @@
 # massage-booking
-Node.js Booking app for 2Hats.
+Node.js Booking App for 2Hats.
 
 ## Setup Google Calendar API
 Follow the following instructions to setup the API with your Google account and obtain the `credentials.json` file.
