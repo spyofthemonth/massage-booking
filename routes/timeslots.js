@@ -8,13 +8,19 @@ router.get("/timeslots", async (req, res) => {
 
         /* If the month or day query strings represent a number less than 10
         and don't have a leading zero character. */
-        if (req.query.month.charAt(0) != 0 && req.query.month < 10)
+        if (req.query.month.length < 2)
             req.query.month = "0" + req.query.month;
-        if (req.query.day.charAt(0) != 0 && req.query.day < 10)
+        if (req.query.day.length < 2)
             req.query.day = "0" + req.query.day;
 
-        const givenDate = new Date(req.query.year + "-" + req.query.month +
-        "-" + req.query.day + "T09:00:00Z");
+        /*const givenDate = new Date(req.query.year + "-" + req.query.month +
+        "-" + req.query.day + "T09:00:00Z");*/
+        const givenDate = new Date();
+        givenDate.setUTCFullYear(req.query.year);
+        givenDate.setUTCMonth(req.query.month - 1);
+        givenDate.setUTCDate(req.query.day);
+        givenDate.setUTCHours(9);
+
         const currentDate = new Date();
         // We set hours to 9 so time is equal to givenDate.
         currentDate.setHours(9);

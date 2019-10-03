@@ -1,0 +1,13 @@
+{
+  "name": "twohatsnodeapp",
+  "version": "1.0.0",
+  "description": "Node App for 2Hats",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "moment": "^2.24.0"
+  },
+  "author": "Ryan King",
+  "license": "ISC"
+}

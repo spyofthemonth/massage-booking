@@ -12,6 +12,7 @@ const moment = require("moment");
 **/
 async function getTimeSlots(year, month, date) {
     let dateTime = new Date(year + "-" + month + "-" + date + "T09:00:00Z");
+    /* Using the set methods causes issues hence an ISO string was used. */
     let timeSlots = [];
     let timeSlotBounds = {};
 
@@ -24,6 +25,7 @@ async function getTimeSlots(year, month, date) {
 
         if (i == 0) {
             dateTime.setMinutes(dateTime.getMinutes() - 1);
+            //set startTime
             timeSlotBounds.startTime = dateTime.toISOString();
             dateTime.setMinutes(dateTime.getMinutes() + 1);
         }
@@ -33,6 +35,7 @@ async function getTimeSlots(year, month, date) {
 
         if (i == 11) {
             dateTime.setMinutes(dateTime.getMinutes() - 1);
+            //set endTime
             timeSlotBounds.endTime = dateTime.toISOString();
             dateTime.setMinutes(dateTime.getMinutes() + 1);
         }
