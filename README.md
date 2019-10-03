@@ -6,7 +6,7 @@ Follow the following instructions to setup the API with your Google account and 
 https://developers.google.com/calendar/quickstart/nodejs
 
 ## Run
-`npm install` to install dependencies.
+`npm install` to install dependencies.\
 `$ node app.js`
 
 (hosted on port 3000)
