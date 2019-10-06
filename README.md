@@ -5,8 +5,10 @@ Node.js Booking App for 2Hats.
 Follow the following instructions to setup the API with your Google account and obtain the `credentials.json` file.
 https://developers.google.com/calendar/quickstart/nodejs
 
+## Install dependencies
+`$ npm install`
+
 ## Run
-`$ npm install` to install dependencies.\
 `$ node app.js`
 
 ## Endpoints
