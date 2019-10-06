@@ -53,7 +53,7 @@ router.post("/book", async (req, res) => {
                               endDateTime.getUTCDay() == 6);
 
     const daysTillAppointment =
-    ((startDateTime.getTime() - (10 * 1000 * 3600) - currentDate.getTime())
+    ((startDateTime.getTime() - (11 * 1000 * 3600) - (new Date()).getTime())
     / (1000 * 3600 * 24));
 
     if (startDateTime < currentDate) {
